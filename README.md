@@ -4,9 +4,9 @@ One girl's mission to find her lost potato via the help of the interwebs people
 ## User Stories
 
 ### To-Dos:
-- map out idea
+- map out idea ✔
 - research Maps API
-- skeleton
+- skeleton ✔
 - schema
 - migrations & models
 - routes/controllers
