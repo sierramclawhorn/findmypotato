@@ -1,4 +1,3 @@
-
 # USERS INDEX
 get '/users' do
   @users = User.all
