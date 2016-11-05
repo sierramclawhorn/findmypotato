@@ -31,11 +31,11 @@ post '/users' do
   
 end
 
-# USERS SHOW
-get '/users/:id' do
-  @user = User.find(params[:id])
-  erb :'users/show'
-end
+# # USERS SHOW
+# get '/users/:id' do
+#   @user = User.find(params[:id])
+#   erb :'users/show'
+# end
 
 # # USERS EDIT
 # get '/users/:id/edit' do
