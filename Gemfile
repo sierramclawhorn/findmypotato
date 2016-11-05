@@ -16,6 +16,13 @@ gem 'bcrypt'
 gem 'shotgun'
 gem 'pry'
 
+gem 'hirb'
+
+group :api_helpers do
+  gem 'httparty'
+  gem 'dotenv'
+end
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
