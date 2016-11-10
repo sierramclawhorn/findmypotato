@@ -2,7 +2,8 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
 
-# DON'T FOREGET USER ASSOCIATIONS!!!!!!!!
+  has_many :comments
+  has_many :pins
 
   include BCrypt
 
