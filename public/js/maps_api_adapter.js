@@ -1,5 +1,6 @@
 var marker;
 var map;
+var createdMarkers = [];
 
 function initMap() {
   var myLatLng = {lat: 37.7949, lng: -122.3700};
@@ -23,8 +24,18 @@ function placeMarker(location) {
     animation: google.maps.Animation.DROP,
     position: location
   });
+  createdMarkers.push(marker);
   marker.addListener('click', toggleBounce);
-  };
+
+  $.ajax ( {
+    method: 'POST',
+    url: '/spotted',
+    data: marker,
+    dataType: 'json'
+  } ).done(function(response) {
+    // WHAT AM I EVEN DOING WITH THIS RESPONSE?
+  })
+};
 
 function toggleBounce() {
   if (marker.getAnimation() !== null) {
@@ -32,13 +43,4 @@ function toggleBounce() {
   } else {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
-}
-
-// space markers' animations using a pattern
-function drop() {
-  for (var i =0; i < markerArray.length; i++) {
-    setTimeout(function() {
-      addMarkerMethod();
-    }, i * 200);
-  }
-}
+};
