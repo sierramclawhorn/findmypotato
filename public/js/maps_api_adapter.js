@@ -8,8 +8,10 @@ function initMap() {
     center: myLatLng
   });
 
+  var image = '/images/marker.png';
   marker = new google.maps.Marker({
     map: map,
+    icon: image,
     draggable: true,
     animation: google.maps.Animation.DROP,
     position: {lat: 37.7840, lng: -122.4330}
@@ -22,5 +24,14 @@ function toggleBounce() {
     marker.setAnimation(null);
   } else {
     marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+// space markers' animations using a pattern
+function drop() {
+  for (var i =0; i < markerArray.length; i++) {
+    setTimeout(function() {
+      addMarkerMethod();
+    }, i * 200);
   }
 }
