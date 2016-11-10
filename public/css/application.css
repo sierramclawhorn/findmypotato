@@ -15,7 +15,7 @@
 
 #pretitle {
   font-size: 1.5em;
-  margin-bottom: -6%;
+  margin-bottom: -1%;
 }
 
 #missing {
@@ -30,24 +30,37 @@
 }
 
 #potato-img, .posterinfo {
+  display: inline-block;
+  vertical-align: top;
   -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
       box-sizing: border-box;
 }
 
 #potato-img {
-  display: inline-block;
-  vertical-align: top;
   width: 50%;
   padding: 2%;
   left: 0px;
 }
 
 .posterinfo {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%
+  width: 50%;
   margin-left: 50%;
   border: 1px solid black;
   padding: 1.2%;
+  font-size: 1.3em;
+}
+
+.postertext {
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+.bold {
+  font-weight: bold;
+  letter-spacing: .15em;
+}
+
+.stats {
+
 }
