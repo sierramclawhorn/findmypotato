@@ -24,17 +24,16 @@ function placeMarker(location) {
     animation: google.maps.Animation.DROP,
     position: location
   });
-  createdMarkers.push(marker);
-  marker.addListener('click', toggleBounce);
-
+  var lat = marker.position.lat()
+  var lng = marker.position.lng()
   $.ajax ( {
-    method: 'POST',
-    url: '/spotted',
-    data: marker,
-    dataType: 'json'
-  } ).done(function(response) {
-    // WHAT AM I EVEN DOING WITH THIS RESPONSE?
-  })
+      method: 'GET',
+      url: "/spotted/search?lat=" + lat + "&lng=" + lng + "",
+    } ).done(function(response) {
+      console.log(response)
+      createdMarkers.push(marker);
+      marker.addListener('click', toggleBounce);
+    } );
 };
 
 function toggleBounce() {

@@ -10,11 +10,16 @@ get '/spotted' do
 end
 
 #CREATE pin
-post '/spotted' do
-  @pin = Pin.new(params[:pin]) 
+get '/spotted/search' do
+  p "*" *50
+  p params
+  @pin = Pin.new(lat: params[:lat], lng: params[:lng]) 
+  @pin.user_id = current_user.id
   if @pin.save && request.xhr?
-    @pin.to_json 
+    status 200
+    "liiiop"
   else
+    "im in the else"
     erb :'pins/new' 
   end
 end
