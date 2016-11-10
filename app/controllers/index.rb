@@ -10,5 +10,6 @@ end
 
 # SPOTTED PAGE
 get '/spotted' do
+  @mykey = ENV['MAPS_API_KEY']
   erb :'pages/spotted'
 end
