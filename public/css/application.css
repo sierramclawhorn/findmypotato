@@ -29,22 +29,29 @@
   margin-bottom: 5%;
 }
 
-#potato-img, .posterinfo {
+.image, .posterinfo {
   display: inline-block;
   vertical-align: top;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+.image {
+  text-align: center;
+  padding: 2%;
+  left: 0px;
   -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
       box-sizing: border-box;
 }
 
 #potato-img {
-  width: 50%;
-  padding: 2%;
-  left: 0px;
+  max-width: 100%;
 }
 
 .posterinfo {
-  width: 50%;
   margin-left: 50%;
   border: 1px solid black;
   padding: 1.2%;

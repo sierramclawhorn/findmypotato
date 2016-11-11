@@ -3,6 +3,7 @@ var map;
 var createdMarkers = [];
 
 function initMap() {
+  // make myLatLng coordinates of last placed marker
   var myLatLng = {lat: 37.7949, lng: -122.3700};
 
   map = new google.maps.Map(document.getElementById('map'), {
