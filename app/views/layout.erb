@@ -11,8 +11,10 @@
 </head>
 <body>
   <header>
-    <%= erb :'_header' %>
-    <%= erb :'partials/_nav' %>
+    <div class="login-logout">
+      <%= erb :'_header' %>
+    </div>
+      <%= erb :'partials/_nav' %>
   </header>
   <%= yield %>
 </body>

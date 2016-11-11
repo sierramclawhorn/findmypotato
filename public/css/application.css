@@ -1,3 +1,14 @@
+/*LAYOUT HEADER*/
+.login-logout {
+  text-align: right;
+}
+
+/*_NAV*/
+.nav {
+  text-align: center;
+}
+
+
 /*INDEX*/
 #posterstyle {
   width: 76%;
