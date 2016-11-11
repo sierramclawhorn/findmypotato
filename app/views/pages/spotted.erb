@@ -27,7 +27,13 @@
     <div id="map"></div>
 
     <div class="last-seen">
-      <span class="bold"><%= @pins.last.user.username %></span> was the last user to spot the potato on <span class="bold"><%= @pins.last.created_at %></span>
+      <span class="bold"><%= @pins.last.user.username %></span> was the last user to spot the potato on <span class="bold"><%= @pins.last.created_at %></span><br>
+      Click a pinned potato to animate the last location<br>
+      <span class="smaller">(tip: zooming out may be necessary)</span>
+    </div>
+
+    <div class="comments">
+
     </div>
 
 

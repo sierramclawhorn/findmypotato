@@ -68,3 +68,7 @@
   padding: 2%;
   text-align: center;
 }
+
+.smaller {
+  font-size: 50%;
+}
