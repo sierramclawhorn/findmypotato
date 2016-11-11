@@ -1,6 +1,5 @@
 var marker;
 var map;
-var createdMarkers = [];
 
 function initMap() {
   var myLatLng = {lat: 37.7949, lng: -122.3700};
@@ -9,6 +8,20 @@ function initMap() {
     zoom: 11,
     center: myLatLng
   });
+
+  $.ajax ( {
+      method: 'GET',
+      url: "/spotted"
+    } ).done(function(response) {
+      var pins = JSON.parse(response)
+      pins.forEach(function(pin) {
+        var lat = pin.lat; 
+        var lng = pin.lng;
+        var latLng = {lat: lat, lng: lng};
+        placeMarker(latLng);
+      })
+    } );
+
 
   google.maps.event.addListener(map, 'click', function(event) {
     placeMarker(event.latLng);
@@ -30,8 +43,6 @@ function placeMarker(location) {
       method: 'GET',
       url: "/spotted/search?lat=" + lat + "&lng=" + lng + "",
     } ).done(function(response) {
-      console.log(response)
-      createdMarkers.push(marker);
       marker.addListener('click', toggleBounce);
     } );
 };

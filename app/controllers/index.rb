@@ -9,7 +9,8 @@ get '/about' do
 end
 
 # SPOTTED PAGE
-get '/spotted' do
-  @mykey = ENV['MAPS_API_KEY']
-  erb :'pages/spotted'
-end
+# get '/spotted' do
+#   @mykey = ENV['MAPS_API_KEY']
+#   erb :'pages/spotted'
+# end
+# in pins_controller

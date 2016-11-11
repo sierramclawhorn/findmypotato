@@ -1,13 +1,18 @@
 # #INDEX pins
-# get '/pins' do
-#   @pins = Pin.all 
-#   erb :'pins/index'
-# end
-
-#NEW pin
 get '/spotted' do
-  erb :'pins/new'
+  @pins = Pin.all 
+  if request.xhr?
+    @pins.to_json
+    p @pins.to_json
+  else
+    erb :'pages/spotted'
+  end
 end
+
+# #NEW pin
+# get '/spotted' do
+#   erb :'pins/new'
+# end
 
 #CREATE pin
 get '/spotted/search' do
@@ -19,7 +24,6 @@ get '/spotted/search' do
     status 200
     "liiiop"
   else
-    "im in the else"
     erb :'pins/new' 
   end
 end
