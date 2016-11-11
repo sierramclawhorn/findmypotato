@@ -12,13 +12,12 @@ end
 
 # USERS CREATE
 post '/users' do
-
   if params[:password_confirmation] == params[:user][:password]
     @user = User.new(params[:user])
 
     if @user.save
       session[:id] = @user.id
-      redirect "/users/#{@user.id}"
+      redirect "/"
     else
       @errors = @user.errors.full_messages
       erb :'users/new'
@@ -28,7 +27,6 @@ post '/users' do
     @errors = ["Passwords do not match!"]
     erb :'users/new'
   end
-  
 end
 
 # # USERS SHOW
