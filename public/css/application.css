@@ -1,4 +1,8 @@
 /*INDEX*/
+body {
+/*  width: 800px;*/
+}
+
 #posterstyle {
   width: 76%;
   margin: 0 auto;
@@ -25,26 +29,22 @@
 }
 
 .posterbody {
-  position: relative;
+  clear: both;
+/*  position: relative;*/
   margin-bottom: 5%;
-}
-
-.image, .posterinfo {
-  display: inline-block;
-  vertical-align: top;
-  width: 50%;
-  -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-      box-sizing: border-box;
+  width : 100%;
 }
 
 .image {
-  text-align: center;
-  padding: 2%;
+  display: inline-block;
+  vertical-align: top;
+/*  padding: 2%;*/
   left: 0px;
-  -webkit-box-sizing: border-box;
+  width: 40%;
+/*  width: 50%;*/
+/*  -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-      box-sizing: border-box;
+      box-sizing: border-box;*/
 }
 
 #potato-img {
@@ -52,10 +52,16 @@
 }
 
 .posterinfo {
-  margin-left: 50%;
+  display: inline-block;
+  vertical-align: top;
   border: 1px solid black;
   padding: 1.2%;
+  margin-top: 5%;
   font-size: 1.3em;
+  width: 50%;
+/*  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;*/
 }
 
 .postertext {
