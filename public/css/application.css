@@ -1,4 +1,7 @@
 /*INDEX*/
+body {
+  max-height: 100%;
+}
 
 #posterstyle {
   width: 76%;
