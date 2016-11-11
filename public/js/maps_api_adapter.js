@@ -1,5 +1,6 @@
 var marker;
 var map;
+var createdMarkers = [];
 
 function initMap() {
   var myLatLng = {lat: 37.7949, lng: -122.3700};
@@ -19,12 +20,13 @@ function initMap() {
         var lng = pin.lng;
         var latLng = {lat: lat, lng: lng};
         placeMarker(latLng);
-      })
+        marker.addListener('click', toggleBounce);
+      } )
     } );
 
 
   google.maps.event.addListener(map, 'click', function(event) {
-    placeMarker(event.latLng);
+    createMarker(event.latLng);
   });
 }
 
@@ -37,8 +39,24 @@ function placeMarker(location) {
     animation: google.maps.Animation.DROP,
     position: location
   });
-  var lat = marker.position.lat()
-  var lng = marker.position.lng()
+  createdMarkers.push(marker);
+  var lat = marker.position.lat();
+  var lng = marker.position.lng();
+};
+
+
+function createMarker(location) {
+  var image = '/images/marker.png';
+  marker = new google.maps.Marker({
+    map: map,
+    icon: image,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: location
+  });
+  createdMarkers.push(marker);
+  var lat = marker.position.lat();
+  var lng = marker.position.lng();
   $.ajax ( {
       method: 'GET',
       url: "/spotted/search?lat=" + lat + "&lng=" + lng + "",
