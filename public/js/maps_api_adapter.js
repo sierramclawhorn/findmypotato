@@ -5,6 +5,7 @@ var createdMarkers = [];
 function initMap() {
   // make myLatLng coordinates of last placed marker
   // when marker is hovered, show user_id info
+  // add limit to markers per user in time limit 
   var myLatLng = {lat: 37.7949, lng: -122.3700};
 
   map = new google.maps.Map(document.getElementById('map'), {
