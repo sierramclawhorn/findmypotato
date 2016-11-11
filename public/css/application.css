@@ -58,9 +58,13 @@
 
 .bold {
   font-weight: bold;
+}
+
+.spaced {
   letter-spacing: .15em;
 }
 
-.stats {
-
+.last-seen {
+  padding: 2%;
+  text-align: center;
 }

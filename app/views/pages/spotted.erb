@@ -7,8 +7,6 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map {
         padding: 2%;
         height: 80%;
@@ -28,6 +26,9 @@
   <body>
     <div id="map"></div>
 
+    <div class="last-seen">
+      <span class="bold"><%= @pins.last.user.username %></span> was the last user to spot the potato on <span class="bold"><%= @pins.last.created_at %></span>
+    </div>
 
 
     <script async defer
