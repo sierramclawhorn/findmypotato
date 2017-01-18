@@ -1,1 +1,94 @@
-/*PUT CSS HERE*/
+/*LAYOUT HEADER*/
+.login-logout {
+  text-align: right;
+}
+
+/*_NAV*/
+.nav {
+  text-align: center;
+}
+
+
+/*INDEX*/
+#posterstyle {
+  width: 76%;
+  max-height: 80%;
+  margin: 0 auto;
+  padding: 3%;
+  margin-bottom: 5%;
+  border: .2em solid black;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+.posterhead {
+  text-align: center;
+}
+
+#pretitle {
+  font-size: 1.5em;
+  margin-bottom: -1%;
+}
+
+#missing {
+  font-size: 6em; 
+  color: red;
+  text-shadow: 2px 2px grey;
+}
+
+.posterbody {
+  clear: both;
+/*  position: relative;*/
+  margin-bottom: 5%;
+  width : 100%;
+}
+
+.image {
+  display: inline-block;
+  vertical-align: top;
+  left: 0px;
+  width: 40%;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+#potato-img {
+  max-width: 100%;
+}
+
+.posterinfo {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid black;
+  padding: 1.2%;
+  margin-top: 5%;
+  font-size: 1.3em;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+.postertext {
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.spaced {
+  letter-spacing: .15em;
+}
+
+.last-seen {
+  padding: 2%;
+  text-align: center;
+}
+
+.smaller {
+  font-size: 50%;
+}

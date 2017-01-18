@@ -2,15 +2,16 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
 
-# DON'T FOREGET USER ASSOCIATIONS!!!!!!!!
+  has_many :comments
+  has_many :pins
 
   include BCrypt
 
   validates_presence_of :username
   validates_uniqueness_of :username
-  validates_presence_of :password
   validates_presence_of :email
   validates_uniqueness_of :email
+  validates_presence_of :password
   
   def password
     @password ||= Password.new(password_hash)

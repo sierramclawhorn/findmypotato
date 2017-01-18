@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/application.css">
+    <script src="/js/maps_api_adapter.js"></script>
+    <title>Potato Locater</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      #map {
+        margin: 2%;
+        height: 70%;
+        max-width: 98%;
+        -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <div class="last-seen">
+      <span class="bold"><%= @pins.last.user.username %></span> was the last user to spot the potato on <span class="bold"><%= @pins.last.created_at %></span><br>
+      Click a pinned potato to animate the last location<br>
+      <span class="smaller">(tip: zooming out may be necessary)</span>
+    </div>
+
+ <!--    <div class="comments">
+    <button class="add-comment">leave a comment</button>
+    </div> -->
+
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAPS_API_KEY'] %>&callback=initMap" type="text/javascript"> 
+    </script>
+  </body>
+</html>
